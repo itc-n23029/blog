@@ -7,8 +7,8 @@ import {
   TwoColumnMain,
   TwoColumnSidebar
 } from 'components/two-column'
-import Image from 'next/imege'
-import eyecatch from 'imaages/about.jpg'
+import Image from 'next/image'
+import eyecatch from 'images/about.jpg'
 
 const About = () => {
   return (
