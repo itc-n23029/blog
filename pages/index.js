@@ -5,7 +5,7 @@ import Meta from 'components/meta'
 const Home = () => {
   return (
     <Container>
-      <Meta pageTitle='ブログ' pageDesc='ブログの記事一覧' />
+      <Meta />
       <Hero title='CUBE' subtitle='アウトプットしていくサイト' imageOn />
     </Container>
   )
