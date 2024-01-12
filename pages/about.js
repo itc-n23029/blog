@@ -34,7 +34,6 @@ const About = () => {
           transition: '0.2s'
         }}
       />
-
       <TwoColumn>
         <TwoColumnMain>
           <PostBody>
