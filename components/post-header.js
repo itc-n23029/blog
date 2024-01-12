@@ -1,11 +1,18 @@
-import styles from 'styles/post-header.module.css'
+import Container from 'components/container'
+import Logo from 'components/logo'
+import Nav from 'components/nav'
+import styles from 'styles/header.module.css'
 
-export default function PostHeader({ title, subtitle, publish = ''}) {
+const Header = () => {
   return (
-    <div className={styles.stack}>
-      <p className={styles.subtitle}>{subtitle}</p>
-      <h1 className={styles.title}{title}</h1>
-      <publish && <div className={styles.publish}>{publish}</div>
-    </div>
+    <header>
+      <Container large>
+        <div className={styles.flexContainer}>
+          <Logo boxOn />
+          <Nav />
+        </div>
+      </Container>
+    </header>
   )
 }
+export default Header
