@@ -1,18 +1,21 @@
-import Container from 'components/container'
-import Logo from 'components/logo'
-import Nav from 'components/nav'
-import styles from 'styles/header.module.css'
+import styles from 'styles/post-header.module.css'
+import ConvertDate from 'components/convert-date'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faClock } from '@fortawesome/free-regular-svg-icons'
 
-const Header = () => {
+const PostHeader = ({ title, subtitle, publish = '' }) => {
   return (
-    <header>
-      <Container large>
-        <div className={styles.flexContainer}>
-          <Logo boxOn />
-          <Nav />
+    <div className={styles.stack}>
+      <p className={styles.subtitle}>{subtitle}</p>
+      <h1 className={styles.title}>{title}</h1>
+      {publish && (
+        <div className={styles.publish}>
+          <FontAwesomeIcon icon={faClock} size='lg' color='var(--gray--25)' />
+          <ConvertDate dateISO={publish} />
+          {publish}
         </div>
-      </Container>
-    </header>
+      )}
+    </div>
   )
 }
-export default Header
+export default PostHeader
