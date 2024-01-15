@@ -1,4 +1,6 @@
 import { getPostBySlug } from 'lib/api'
+import { extractText } from 'lib/extract-text'
+import Meta from 'components/meta'
 import Container from 'components/container'
 import PostHeader from 'components/post-header'
 import PostBody from 'components/post-body'
@@ -7,11 +9,17 @@ import {
   TwoColumnMain,
   TwoColumnSidebar
 } from 'components/two-column'
+<<<<<<< HEAD
 import Image from 'next/image'
 import PostCategories from 'components/post-categories'
 import ConvertBody from 'components/convert-body'
 import { extractText } from 'lib/extract-text'
 import Meta from 'components/meta'
+=======
+import ConvertBody from 'components/convert-body'
+import PostCategories from 'components/post-categories'
+import Image from 'next/image'
+>>>>>>> chapter8
 
 const Schedule = ({
   title,
@@ -30,6 +38,10 @@ const Schedule = ({
         pageImgW={eyecatch.width}
         pageImgH={eyecatch.height}
       />
+<<<<<<< HEAD
+=======
+
+>>>>>>> chapter8
       <article>
         <PostHeader title={title} subtitle='Blog Article' publish={publish} />
         <figure>
@@ -38,7 +50,11 @@ const Schedule = ({
             alt=''
             layout='responsive'
             width={eyecatch.width}
+<<<<<<< HEAD
             height={eyecatch.height}
+=======
+            height='eyecatch.height'
+>>>>>>> chapter8
             sizes='(min-width: 1152px) 1152px, 100vw'
             priority
           />
@@ -65,14 +81,24 @@ export async function getStaticProps () {
 
   const post = await getPostBySlug(slug)
   const description = extractText(post.content)
+<<<<<<< HEAD
+=======
+
+>>>>>>> chapter8
   return {
     props: {
       title: post.title,
       publish: post.publishDate,
       content: post.content,
       eyecatch: post.eyecatch,
+<<<<<<< HEAD
       categories: post.categories,
       description: description
     }
+=======
+      categories: post.categories
+      description: description,
+    },
+>>>>>>> chapter8
   }
 }

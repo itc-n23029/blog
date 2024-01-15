@@ -20,6 +20,7 @@ const About = () => {
         pageImg={eyecatch.src}
         pageImgW={eyecatch.width}
         pageImgH={eyecatch.height}
+<<<<<<< HEAD
       />
       <Hero title='About' subtitle='About development activities' />
       <Image
@@ -34,6 +35,23 @@ const About = () => {
           transition: '0.2s'
         }}
       />
+=======
+      />
+      <Hero title='About' subtitle='About development activities' />
+      <Image
+        src={eyecatch}
+        alt=''
+        sizes='(min-width:1152px) 1152px, 100vw'
+        priority
+        placeholder='blur'
+        style={{
+          width: '100%',
+          height: 'auto',
+          transition: '0.2s'
+        }}
+      />
+
+>>>>>>> chapter8
       <TwoColumn>
         <TwoColumnMain>
           <PostBody>
