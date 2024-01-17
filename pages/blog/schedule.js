@@ -8,6 +8,7 @@ import {
   TwoColumnSidebar
 } from 'components/two-column'
 import Image from 'next/image'
+import { eyecatchLocal } from 'lib/constants'
 import PostCategories from 'components/post-categories'
 import ConvertBody from 'components/convert-body'
 import { extractText } from 'lib/extract-text'
@@ -65,12 +66,14 @@ export async function getStaticProps () {
 
   const post = await getPostBySlug(slug)
   const description = extractText(post.content)
+  const eyecatch = post.eyecatch ?? eyecatchLocal
+
   return {
     props: {
       title: post.title,
       publish: post.publishDate,
       content: post.content,
-      eyecatch: post.eyecatch,
+      eyecatch: eyecatch,
       categories: post.categories,
       description: description
     }
